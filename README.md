@@ -1,90 +1,91 @@
-<h1 align="center">URL Metadata & Social Profile Fetcher</h1>
+<div align="center">
 
-<p align="center"><strong>Turn any public URL into structured, product-ready metadata.</strong></p>
+# 🔎 URL Metadata & Social Profile Fetcher
 
-<p align="center">
-  <a href="CHANGELOG.md"><img alt="Release v1.0.0.1" src="https://img.shields.io/badge/release-v1.0.0.1-ff6a00"></a>
-  <a href="https://www.typescriptlang.org/"><img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-first-3178c6"></a>
-  <a href="https://nodejs.org/"><img alt="Node.js 18+" src="https://img.shields.io/badge/Node.js-18%2B-339933"></a>
-  <a href="package.json"><img alt="Zero runtime dependencies" src="https://img.shields.io/badge/runtime%20dependencies-0-success"></a>
-  <a href="LICENSE"><img alt="MIT License" src="https://img.shields.io/badge/license-MIT-blue"></a>
-  <a href="https://github.com/vpicciuolo/url-metadata-social-fetcher/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/vpicciuolo/url-metadata-social-fetcher/actions/workflows/ci.yml/badge.svg"></a>
-</p>
+### Paste a public URL → get structured metadata you can actually use.
 
-<p align="center"><strong>Open Graph · SEO · JSON-LD · oEmbed · Social Profiles · Link Unfurling · SSRF-Hardened Fetching · Image Mirroring</strong></p>
+**Production-oriented TypeScript URL enrichment for websites, user profiles, products, projects, startups, apps, social URLs and marketplaces.**
 
-`url-metadata-social-fetcher` is a production-oriented TypeScript toolkit for turning **websites, creator profiles, products, projects, startups, apps, songs, marketplace listings and social URLs** into normalized data your application can actually use.
+[![Release](https://img.shields.io/badge/release-v1.0.0.1-ff6a00?style=for-the-badge)](CHANGELOG.md)
+[![TypeScript](https://img.shields.io/badge/TypeScript-first-3178c6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-18%2B-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
+[![Runtime dependencies](https://img.shields.io/badge/runtime_dependencies-0-2ea44f?style=for-the-badge)](package.json)
+[![License](https://img.shields.io/badge/license-MIT-0969da?style=for-the-badge)](LICENSE)
 
-From one public URL you can obtain, when available: title/name, description/bio, canonical URL, Open Graph and SEO metadata, JSON-LD, oEmbed, favicon/logo/avatar/preview imagery, public social links, public profile metrics, keywords, locale, author, publish date and brand/theme-color hints.
+**[Quick Start](#quick-start--one-api)** · **[Live Production](#-live-in-production)** · **[Use Cases](#what-can-you-build)** · **[Architecture](#architecture)** · **[Security](#security-model)** · **[Support](#-support-development)**
 
-The core has **zero runtime dependencies** and uses standard Web APIs. **Node.js 18+** is the primary supported runtime.
+</div>
+
+> **URL in. Structured product data out.** Extract titles, descriptions, Open Graph and SEO metadata, canonical URLs, images, favicons, public social links, brand-color hints and available profile metrics — with SSRF-safe server-side fetching and optional remote-image mirroring.
+
+`url-metadata-social-fetcher` is designed for the point where a product asks a user to paste a URL and should immediately turn that URL into a useful, editable record instead of another empty form. It is framework-agnostic TypeScript, has **zero runtime dependencies**, and uses standard Web APIs. Node.js 18+ is the primary supported runtime.
+
+### Why builders use it
+
+| Input | What you can create |
+| --- | --- |
+| Website / startup URL | Name, description, canonical URL, preview image, favicon, keywords, socials |
+| Creator / user profile | Display name, bio, avatar, network, public metrics when available |
+| Product / app / service | Rich listing draft, preview card, marketplace record, directory entry |
+| Social URL | Normalized profile identity, oEmbed/public profile enrichment |
+| Any untrusted public URL | Bounded, redirect-aware, SSRF-hardened fetch before extraction |
+
+**Built from a real production pattern, not a demo-only parser.** The same class of URL enrichment is used live by **BeHot.Now** and **HORNO Space**.
 
 ---
 
 ## 🔥 Live in production
 
-This repository is not only a reference implementation. The same URL-enrichment pattern is already used in live products built by **HRN Innovation Technologies Ltd**.
+This is not only a reference implementation. The same URL-enrichment approach is already used in live products from **HRN Innovation Technologies Ltd** — turning pasted URLs into richer listing, profile and smart-link experiences.
 
 ### BeHot.Now — The Attention Marketplace
 
-<a href="https://behot.now/get-hot">
-  <img src="./assets/behot-live-banner.png" alt="Live on BeHot.Now — open the live URL enrichment flow" width="100%">
-</a>
+[![Live on BeHot.Now](./assets/behot-live.png)](https://behot.now/get-hot)
 
-<p align="center"><strong><a href="https://behot.now/get-hot">🔥 Try the live URL-first listing flow on BeHot.Now →</a></strong></p>
+**[→ Open the live BeHot.Now listing flow](https://behot.now/get-hot)**
 
-[BeHot.Now](https://behot.now) is an **attention marketplace** where creators, startups, apps, brands, products, businesses, events, services and ideas can compete for visibility on live ranking boards.
+[BeHot.Now](https://behot.now) is an attention marketplace where creators, startups, apps, brands, products, businesses, events, services and ideas can compete for visibility on live ranking boards.
 
-The fetcher powers a **URL-first onboarding workflow**: a user pastes a website, project, product or profile URL and the platform can pre-fill useful listing data such as **name/title, description, logo or preview image, canonical URL and discovered social links**. The user reviews the draft instead of retyping public information that already exists.
+The URL fetcher powers the **URL-first listing workflow**: a user submits a website, product, project or profile URL and BeHot can use public metadata to pre-fill useful listing information such as the **name/title, description, logo or preview image, canonical URL and discovered social links**. The user can then review the draft before the listing enters the platform workflow.
 
-This pattern is especially useful for **Outbid-style bid-to-position websites, paid ranking boards, startup launch directories, product/SaaS directories, creator charts, marketplaces and sponsored discovery pages**.
+That pattern is especially valuable for **Outbid-style websites, paid ranking boards, startup launch directories and discovery marketplaces** because users do not need to manually retype public information that already exists on the URL they submit.
 
-**Live:** [behot.now](https://behot.now) · **Create a listing:** [behot.now/get-hot](https://behot.now/get-hot) · **How it works:** [behot.now/how-it-works](https://behot.now/how-it-works)
+**Live:** [behot.now](https://behot.now) · **Try the flow:** [behot.now/get-hot](https://behot.now/get-hot) · **How it works:** [behot.now/how-it-works](https://behot.now/how-it-works)
 
 ### HORNO Space — Your digital world. One link.
 
 <p align="center">
   <a href="https://space.horno.net">
-    <img src="./assets/horno-space-logo.png" alt="HORNO Space — Your digital world. One link." width="72%">
+    <img src="./assets/horno-space-logo.png" alt="HORNO Space — Your digital world. One link." width="70%">
   </a>
 </p>
 
-<a href="https://space.horno.net">
-  <img src="./assets/horno-space-live-banner.png" alt="Live on HORNO Space — open Space.Horno.net" width="100%">
-</a>
+[![Live on HORNO Space](./assets/horno-space-live.png)](https://space.horno.net)
 
-<p align="center"><strong><a href="https://space.horno.net">🚀 Open HORNO Space →</a></strong></p>
+**[→ Open HORNO Space](https://space.horno.net)**
 
-[HORNO Space](https://space.horno.net) is an **all-in-one digital identity and sharing hub**. A single public Space can bring together a bio link, digital business card, social profiles, smart links, products and services, referral links, QR sharing, live sessions and community-facing identity in one URL.
+[HORNO Space](https://space.horno.net) is an **all-in-one digital identity and sharing platform** for creators, professionals, founders, recruiters and communities. One public Space can bring together a bio page, smart links, social profiles, a digital business card, articles, products and services, referral links, QR sharing, analytics, verification, community discovery, live experiences and a public profile designed to be discoverable on the web.
 
-The same URL-enrichment functionality is used live in HORNO Space to turn raw links into richer **smart-link cards and profile blocks** with title, description, canonical URL, imagery and discovered social connections when available.
+The same URL-enrichment functionality is used live in HORNO Space to make external URLs and profile links more useful. Instead of treating a submitted URL as plain text, the system can read the public page, normalize the destination and obtain usable metadata for **richer link cards, richer profile cards, previews and profile-building workflows**.
 
-Typical HORNO Space uses include website/profile import, rich smart-link generation, public social discovery, favicon/Open Graph image extraction, external-link normalization, reduced manual profile setup, and structured metadata for previews, discovery and indexing.
+Typical HORNO Space enrichment use cases include:
+
+- adding a website and obtaining a usable title, description, canonical URL and visual preview;
+- importing public social/profile information where the source exposes it;
+- generating richer smart-link cards instead of displaying only a raw URL;
+- discovering public social links connected to a website;
+- using favicon, Open Graph image or available profile imagery in presentation layers;
+- normalizing external links before they are added to a user's digital identity;
+- reducing manual profile setup when a user already has public information elsewhere;
+- producing structured metadata that can support search, previews, discovery and indexing.
 
 **Live:** [space.horno.net](https://space.horno.net) · **HORNO Network:** [horno.net](https://horno.net)
 
 ---
 
-## ⚡ One URL → useful product data
-
-| Input | Enrichment | Output | Product use |
-| --- | --- | --- | --- |
-| Website | SEO + Open Graph + JSON-LD | title, description, image, canonical URL, socials | directories, marketplaces, previews |
-| Creator profile | profile detection + public metadata | display name, bio, avatar, metrics when exposed | creator onboarding |
-| Product/startup URL | page metadata + imagery | listing draft | launch boards, rankings, catalogs |
-| Article/content URL | metadata + text extraction | structured source record | curation, RAG, research tools |
-| Remote image | bounded safe fetch + mirror | stable controlled URL | durable cards/listings |
-
-```ts
-import { enrichUrl } from 'url-metadata-social-fetcher';
-
-const result = await enrichUrl('https://example.com');
-console.log(result);
-```
-
 ## Why this exists
 
-A simple URL field becomes infrastructure quickly: redirects, expiring CDN images, inconsistent metadata, Open Graph vs JSON-LD vs oEmbed, oversized responses, repeated requests and SSRF risk. This project packages a reusable engineering layer for those problems.
+A URL field becomes infrastructure surprisingly quickly: redirects, expiring CDN images, inconsistent social metadata, Open Graph vs JSON-LD vs oEmbed, oversized responses, repeated requests and SSRF risk. This project packages a reusable engineering layer for those problems.
 
 ### v1.0.0.1 capabilities
 
@@ -102,25 +103,44 @@ A simple URL field becomes infrastructure quickly: redirects, expiring CDN image
 | Images | OG/avatar/favicon discovery and optional mirroring |
 | Cache | TTL memory cache + in-flight de-duplication |
 | Storage | filesystem, generic HTTP PUT, memory |
-| Runtime dependencies | 0 |
+| Runtime deps | 0 |
 
-## Quick start
+## Quick start — one API
 
-```bash
-git clone https://github.com/vpicciuolo/url-metadata-social-fetcher.git
-cd url-metadata-social-fetcher
-npm install
-npm test
-npm run build
+```ts
+import { enrichUrl } from 'url-metadata-social-fetcher';
+
+const result = await enrichUrl('https://example.com');
+console.log(result);
 ```
 
-Once published to npm:
+Typical website result:
 
-```bash
-npm install url-metadata-social-fetcher
+```ts
+{
+  input: 'https://example.com',
+  kind: 'website',
+  network: 'website',
+  canonicalUrl: 'https://example.com/',
+  title: 'Example Domain',
+  description: 'Example description',
+  imageUrl: 'https://example.com/og.jpg',
+  iconUrl: 'https://example.com/favicon.ico',
+  themeColor: '#111111',
+  brandColors: ['#111111'],
+  keywords: ['example'],
+  socialLinks: ['https://x.com/example']
+}
 ```
 
-> Repository release: **v1.0.0.1**. npm uses three-part SemVer, so `package.json.version` remains `1.0.0` while `VERSION`, `RELEASE_VERSION` and the changelog retain `1.0.0.1`.
+Social profile:
+
+```ts
+const creator = await enrichUrl('https://www.instagram.com/nasa/');
+console.log(creator?.kind);    // social-profile
+console.log(creator?.network); // instagram
+console.log(creator?.profile);
+```
 
 ## Architecture
 
@@ -142,24 +162,191 @@ flowchart LR
 
 See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
 
+## Live usage patterns
+
+### BeHot.Now
+
+BeHot.Now uses a URL-first onboarding pattern: paste a link, extract useful public metadata, create an editable draft, mirror stable assets when appropriate, then pass through moderation before public listing.
+
+```mermaid
+sequenceDiagram
+  participant U as User
+  participant B as BeHot.now
+  participant F as URL Fetcher
+  participant S as Storage
+  participant A as Approval
+  U->>B: Paste project/profile/product URL
+  B->>F: Enrich public URL
+  F-->>B: title + description + image + socials + canonical URL
+  B->>S: Mirror selected image
+  S-->>B: stable asset URL
+  B->>U: Pre-filled draft
+  U->>B: Review/complete
+  B->>A: Human moderation
+  A-->>B: Approve
+```
+
+### HORNO Space
+
+HORNO Space uses the same enrichment logic for smarter link and profile experiences. The system can turn a raw URL into a richer smart-link card, a better profile block or a more complete identity record.
+
+```mermaid
+flowchart LR
+  A[User adds website or social URL] --> B[Normalize URL]
+  B --> C[Fetch public page safely]
+  C --> D[Extract metadata and social links]
+  D --> E[Create richer smart-link card]
+  D --> F[Create richer profile block]
+  D --> G[Support discovery and indexing]
+```
+
+See [`docs/BEHOT-LIVE.md`](docs/BEHOT-LIVE.md).
+
 ## What can you build?
 
-- Outbid / bid-to-position websites and paid visibility boards
-- startup, SaaS, AI and developer-tool directories
-- creator, influencer, artist, DJ, music and brand charts
-- profile import, link-in-bio products and digital business cards
-- marketplaces, seller onboarding and service/gig listings
-- startup/product databases and crowdfunding project intake
-- link previews, URL unfurling and smart-link services
-- SEO/Open Graph debugging and website-to-JSON tooling
-- CRM, lead, partner, vendor and exhibitor onboarding
-- RAG URL pre-processing, AI research tools and agent pipelines
+### Ranking and discovery
 
-See [`docs/USE-CASES.md`](docs/USE-CASES.md) for the expanded matrix.
+- Outbid / bid-to-position websites
+- pay-to-rank leaderboards
+- startup launch boards
+- Product Hunt-style directories
+- AI/SaaS/developer-tool directories
+- creator/music/brand charts
+- sponsored resource lists
+- community discovery boards
+
+### Profiles and identity
+
+- creator/influencer profiles
+- artist/DJ/musician profiles
+- founder/company profiles
+- portfolio builders
+- link-in-bio products
+- claim-your-profile flows
+- social-profile import/onboarding
+- digital business cards
+- link hubs and smart profile pages
+
+### Marketplaces
+
+- freelancer and creator marketplaces
+- influencer campaign platforms
+- agency/vendor/talent directories
+- service/gig listings
+- plugin/integration marketplaces
+- seller onboarding with URL-first autofill
+
+### Products, projects and content
+
+- startup/product databases
+- partner/investor portfolio pages
+- crowdfunding project intake
+- link previews and chat unfurling
+- bookmark managers
+- news/content curation
+- podcast/music/video directories
+
+### SEO, CRM and AI
+
+- Open Graph debuggers
+- canonical/metadata QA
+- CRM website intake
+- public lead/company cards
+- RAG URL pre-processing
+- agent tools that receive untrusted URLs
+- website-to-JSON utilities
+
+See the expanded matrix in [`docs/USE-CASES.md`](docs/USE-CASES.md).
+
+## Installation
+
+```bash
+git clone https://github.com/vpicciuolo/url-metadata-social-fetcher.git
+cd url-metadata-social-fetcher
+npm install
+npm test
+npm run build
+```
+
+Once published to npm:
+
+```bash
+npm install url-metadata-social-fetcher
+```
+
+> Repository release: **v1.0.0.1**. npm requires three-part SemVer, so `package.json.version` is `1.0.0` while `VERSION`, `RELEASE_VERSION` and the changelog retain `1.0.0.1`.
+
+## Core API examples
+
+### Safe fetch
+
+```ts
+import { isSafeUrl, safeFetch } from 'url-metadata-social-fetcher';
+if (!isSafeUrl(url)) throw new Error('Rejected');
+const res = await safeFetch(url, { timeoutMs: 5000, maxBytes: 1_000_000, allowContentTypes: ['text/html'] });
+```
+
+### Page metadata
+
+```ts
+import { enrichPage } from 'url-metadata-social-fetcher';
+const page = await enrichPage(url, { includeText: true });
+console.log(page?.title, page?.description, page?.socialLinks);
+```
+
+### Social enrichment
+
+```ts
+import { enrichSocialProfile } from 'url-metadata-social-fetcher';
+const profile = await enrichSocialProfile('https://x.com/example');
+console.log(profile.displayName, profile.avatarUrl, profile.followers);
+```
+
+### Mirror images
+
+```ts
+import { createFileSystemTarget, mirrorImage } from 'url-metadata-social-fetcher';
+const target = createFileSystemTarget('./public/media', '/media');
+const mirrored = await mirrorImage(remoteImage, target);
+```
+
+### Build a listing draft
+
+```ts
+const enriched = await enrichUrl(userSubmittedUrl);
+if (!enriched) throw new Error('Could not read URL');
+const draft = {
+  sourceUrl: userSubmittedUrl,
+  canonicalUrl: enriched.canonicalUrl,
+  name: enriched.title ?? '',
+  description: enriched.description ?? '',
+  image: enriched.imageUrl ?? enriched.iconUrl ?? '',
+  socialLinks: enriched.socialLinks,
+  tags: enriched.keywords,
+  sourceNetwork: enriched.network,
+  status: 'draft'
+};
+```
 
 ## Supported social detection
 
-Instagram · Threads · Facebook · TikTok · YouTube · SoundCloud · Twitch · Spotify · X/Twitter · GitHub · LinkedIn · Telegram · Pinterest · Snapchat · Discord
+| Network | Common profile form |
+| --- | --- |
+| Instagram | `instagram.com/name` |
+| Threads | `threads.net/@name` |
+| Facebook | `facebook.com/name` |
+| TikTok | `tiktok.com/@name` |
+| YouTube | `youtube.com/@name`, `/user/name` |
+| SoundCloud | `soundcloud.com/name` |
+| Twitch | `twitch.tv/name` |
+| Spotify | `open.spotify.com/artist/id` |
+| X/Twitter | `x.com/name`, `twitter.com/name` |
+| GitHub | `github.com/name` |
+| LinkedIn | `/in/name`, `/company/name` |
+| Telegram | `t.me/name` |
+| Pinterest | `pinterest.com/name` |
+| Snapchat | `snapchat.com/add/name` |
+| Discord | `discord.gg/code`, `/invite/code` |
 
 Detection does not mean every platform exposes every metric publicly. The library returns the best available public data and fails soft when platforms limit access.
 
@@ -167,9 +354,13 @@ Detection does not mean every platform exposes every metric publicly. The librar
 
 The guard rejects non-HTTP(S) schemes, credentials in URLs, loopback/private/link-local/metadata targets, internal-style hostnames and unexpected ports. Redirects are followed manually and every destination is validated again. Response bodies are bounded by time and bytes.
 
-**DNS rebinding:** hostname checks alone cannot guarantee resolved-IP safety. In high-risk multi-tenant infrastructure, also enforce private/reserved IP blocking at DNS, egress or firewall level. See [`SECURITY.md`](SECURITY.md).
+**DNS rebinding:** hostname checks alone cannot guarantee resolved IP safety. In high-risk multi-tenant infrastructure, also enforce private/reserved IP blocking at DNS/egress/firewall level. See [`SECURITY.md`](SECURITY.md).
 
 Fetched content remains **untrusted input**: sanitize/output-encode it, apply length limits and never treat imported metadata as a moderation decision.
+
+## Image mirroring
+
+Remote social/CDN images can expire or block hotlinking. `mirrorImage()` creates a stable SHA-256-based key and stores the file in infrastructure you control. v1.0.0.1 also checks known extensions before re-downloading an already mirrored image.
 
 ## Repository layout
 
@@ -179,31 +370,54 @@ src/extractors    metadata, JSON-LD, text, social links
 src/providers     network detection, oEmbed, social enrichment
 src/storage       image mirroring and targets
 src/enrich-url.ts unified product-facing API
-examples          practical integrations
+examples          practical integration examples
 test              offline Vitest suites
-docs              architecture, API, live use, recipes, use cases
-assets            README PNG assets
+docs              architecture, API, BeHot live use, recipes, use cases
 .github           CI, CodeQL, Dependabot, issue/PR templates
+assets            README banners and project images
 ```
+
+## Configuration
+
+```env
+FETCH_TIMEOUT_MS=8000
+FETCH_MAX_BYTES=2000000
+FETCH_MAX_REDIRECTS=3
+FETCH_USER_AGENT="url-metadata-social-fetcher/1.0.0.1 (+https://github.com/vpicciuolo/url-metadata-social-fetcher)"
+UNFURL_API_URL=
+UNFURL_API_KEY=
+```
+
+## Important limitations
+
+This project does not bypass authentication, bot protection, captchas, paywalls or access controls; does not promise follower metrics from every social platform; does not execute arbitrary page JavaScript; and does not replace official APIs when your use case requires them. Review platform terms and applicable law, rate-limit requests and cache responsibly.
+
+## Versioning
+
+Current repository release: **v1.0.0.1**. See [`CHANGELOG.md`](CHANGELOG.md).
+
+## Discoverability keywords
+
+Natural project terms: **URL metadata fetcher, URL metadata parser, metadata extractor, Open Graph parser, SEO metadata extractor, social profile fetcher, link preview generator, URL unfurling, oEmbed TypeScript, SSRF safe fetch, social profile enrichment, website metadata API, image mirroring, directory listing autofill, startup directory, creator profile importer, Outbid leaderboard tooling**.
+
+Recommended GitHub settings/topics are in [`docs/DISCOVERABILITY.md`](docs/DISCOVERABILITY.md).
 
 ## Credits
 
 Created by **Vincenzo Picciuolo**, Founder & Lead Engineer, **HRN Innovation Technologies Ltd**.
 
 - GitHub: [@vpicciuolo](https://github.com/vpicciuolo)
-- Live showcase: [BeHot.Now](https://behot.now)
-- Live showcase: [HORNO Space](https://space.horno.net)
+- Live production showcase: [BeHot.Now](https://behot.now)
+- Live production showcase: [HORNO Space](https://space.horno.net)
 - URL submission flow: [BeHot.Now / Get Hot](https://behot.now/get-hot)
 
-## 💜 Support development
+### ❤️ Support development
 
-If this open-source project helps your product or workflow, you can support ongoing development via Stripe:
+If this open-source project helps your platform, product or workflow, you can support continued development through Stripe.
 
-<p align="center">
-  <a href="https://vpicciuolo.github.io/url-metadata-social-fetcher/support.html"><img src="https://img.shields.io/badge/Support%20the%20project-Stripe-635BFF?style=for-the-badge&logo=stripe&logoColor=white" alt="Support via Stripe"></a>
-</p>
+[![Support via Stripe](https://img.shields.io/badge/Support%20Development-Stripe-635BFF?style=for-the-badge&logo=stripe&logoColor=white)](https://vpicciuolo.github.io/url-metadata-social-fetcher/support.html)
 
-GitHub README pages do not execute Stripe JavaScript/custom elements, so the Stripe Buy Button itself lives on [`docs/support.html`](docs/support.html) and is deployed through GitHub Pages.
+> GitHub README files do not execute JavaScript or Stripe custom elements. The Stripe Buy Button therefore runs on the project's dedicated support page in `docs/support.html`.
 
 ## License
 
