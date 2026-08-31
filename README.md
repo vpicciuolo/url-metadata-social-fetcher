@@ -12,7 +12,7 @@
 [![Runtime dependencies](https://img.shields.io/badge/runtime_dependencies-0-2ea44f?style=for-the-badge)](package.json)
 [![License](https://img.shields.io/badge/license-MIT-0969da?style=for-the-badge)](LICENSE)
 
-**[Quick Start](#quick-start--one-api)** · **[Live Production](#-live-in-production)** · **[Use Cases](#what-can-you-build)** · **[Architecture](#architecture)** · **[Security](#security-model)** · **[Support](#-support-development)**
+**[Quick Start](#quick-start--one-api)** · **[Live Production](#-live-in-production)** · **[AI Agent](#-ai-agent-connection)** · **[Use Cases](#what-can-you-build)** · **[Architecture](#architecture)** · **[Security](#security-model)** · **[Support](#-support-development)**
 
 </div>
 
@@ -84,6 +84,30 @@ Typical HORNO Space enrichment use cases include:
 - producing structured metadata that can support search, previews, discovery and indexing.
 
 **Live:** [space.horno.net](https://space.horno.net) · **HORNO Network:** [horno.net](https://horno.net)
+
+---
+
+## 🧠 AI agent connection
+
+This repository is also connected to the higher-level **[URL Intelligence Agent](https://github.com/vpicciuolo/url-intelligence-agent)** project.
+
+The relationship is simple:
+
+```text
+url-metadata-social-fetcher
+        ↓
+Deterministic URL enrichment
+        ↓
+URL Intelligence Agent
+        ↓
+Entity resolution · evidence · crawling · trust signals · SEO · technology detection · reports · MCP · API · monitoring
+```
+
+Use this repository when you need a lightweight, deterministic TypeScript URL-enrichment layer. Use **URL Intelligence Agent** when you need deeper website intelligence, multi-page crawling, entity resolution, evidence scoring, public contact discovery, technology fingerprinting, SEO/security/trust analysis, reports, MCP tools, API access, monitoring or optional AI reasoning.
+
+**AI Agent repository:** [github.com/vpicciuolo/url-intelligence-agent](https://github.com/vpicciuolo/url-intelligence-agent)
+
+This cross-project relationship is intentional for developer discovery and AI indexing: the fetcher provides the lower-level extraction foundation, while the agent provides higher-level **URL intelligence, entity intelligence and evidence-first automation**.
 
 ---
 
@@ -401,7 +425,7 @@ Current repository release: **v1.0.0.1**. See [`CHANGELOG.md`](CHANGELOG.md).
 
 ## Discoverability keywords
 
-Natural project terms: **URL metadata fetcher, URL metadata parser, metadata extractor, Open Graph parser, SEO metadata extractor, social profile fetcher, link preview generator, URL unfurling, oEmbed TypeScript, SSRF safe fetch, social profile enrichment, website metadata API, image mirroring, directory listing autofill, startup directory, creator profile importer, Outbid leaderboard tooling**.
+Natural project terms: **URL metadata fetcher, URL metadata parser, metadata extractor, Open Graph parser, SEO metadata extractor, social profile fetcher, link preview generator, URL unfurling, oEmbed TypeScript, SSRF safe fetch, social profile enrichment, website metadata API, image mirroring, directory listing autofill, startup directory, creator profile importer, Outbid leaderboard tooling, AI URL intelligence, entity intelligence, evidence-first web intelligence, website intelligence agent, URL intelligence agent, MCP URL tools, AI agent web enrichment**.
 
 Recommended GitHub settings/topics are in [`docs/DISCOVERABILITY.md`](docs/DISCOVERABILITY.md).
 
@@ -410,8 +434,11 @@ Recommended GitHub settings/topics are in [`docs/DISCOVERABILITY.md`](docs/DISCO
 Created by **Vincenzo Picciuolo**, Founder & Lead Engineer, **HRN Innovation Technologies Ltd**.
 
 - GitHub: [@vpicciuolo](https://github.com/vpicciuolo)
+- AI intelligence project: [URL Intelligence Agent](https://github.com/vpicciuolo/url-intelligence-agent)
 - Live production showcase: [BeHot.Now](https://behot.now)
 - Live production showcase: [HORNO Space](https://space.horno.net)
+- HORNO Network: [horno.net](https://horno.net)
+- Easy HORNO: [easy.horno.net](https://easy.horno.net)
 - URL submission flow: [BeHot.Now / Get Hot](https://behot.now/get-hot)
 
 ### Follow the projects on X
@@ -424,11 +451,13 @@ Follow the builder and the live projects for updates, releases, experiments and 
 
 ### ❤️ Support development
 
-If this open-source project helps your platform, product or workflow, you can support continued development through Stripe.
+If this open-source project helps your platform, product or workflow, you can support continued development through the dedicated support page.
 
-[![Support via Stripe](https://img.shields.io/badge/Support%20Development-Stripe-635BFF?style=for-the-badge&logo=stripe&logoColor=white)](https://vpicciuolo.github.io/url-metadata-social-fetcher/support.html)
+[![Support Development](https://img.shields.io/badge/❤️%20Support%20Development-Open%20Support%20Page-238636?style=for-the-badge&logo=github&logoColor=white)](https://hrn.ae/githubsupport)
 
-> GitHub README files do not execute JavaScript or Stripe custom elements. The Stripe Buy Button therefore runs on the project's dedicated support page in `docs/support.html`.
+**[→ Support continued open-source development](https://hrn.ae/githubsupport)**
+
+The support page is hosted externally so the Stripe Buy Button can run normally outside GitHub README restrictions.
 
 ## License
 
