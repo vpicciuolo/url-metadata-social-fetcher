@@ -40,7 +40,11 @@ This is not only a reference implementation. The same URL-enrichment approach is
 
 ### BeHot.Now — The Attention Marketplace
 
-[![Live on BeHot.Now](./assets/behot-live.png)](https://behot.now/get-hot)
+<p align="center">
+  <a href="https://behot.now/get-hot">
+    <img src="https://storage.mlcdn.com/account_image/2365654/IgT4Ak3gVL6rVv64QCZsHIxWnRgQt6jWTd3C6hZ6.png" alt="Live on BeHot.Now — The Attention Marketplace" width="100%">
+  </a>
+</p>
 
 **[→ Open the live BeHot.Now listing flow](https://behot.now/get-hot)**
 
@@ -56,11 +60,15 @@ That pattern is especially valuable for **Outbid-style websites, paid ranking bo
 
 <p align="center">
   <a href="https://space.horno.net">
-    <img src="./assets/horno-space-logo.png" alt="HORNO Space — Your digital world. One link." width="70%">
+    <img src="https://storage.mlcdn.com/account_image/2365654/OSm6RDBulbPl4xYrCxY3EnjyL70c1wIr09HSWEpO.png" alt="HORNO Space — Your digital world. One link." width="72%">
   </a>
 </p>
 
-[![Live on HORNO Space](./assets/horno-space-live.png)](https://space.horno.net)
+<p align="center">
+  <a href="https://space.horno.net">
+    <img src="https://storage.mlcdn.com/account_image/2365654/tFNEqhsEXOiyD4J1ntBWzi4HSTLzrVKHOwWPn0Sw.png" alt="Live on HORNO Space — Space.Horno.net" width="100%">
+  </a>
+</p>
 
 **[→ Open HORNO Space](https://space.horno.net)**
 
@@ -374,7 +382,6 @@ examples          practical integration examples
 test              offline Vitest suites
 docs              architecture, API, BeHot live use, recipes, use cases
 .github           CI, CodeQL, Dependabot, issue/PR templates
-assets            README banners and project images
 ```
 
 ## Configuration
