@@ -40,11 +40,9 @@ This is not only a reference implementation. The same URL-enrichment approach is
 
 ### BeHot.Now — The Attention Marketplace
 
-<p align="center">
-  <a href="https://behot.now/get-hot">
-    <img src="https://storage.mlcdn.com/account_image/2365654/IgT4Ak3gVL6rVv64QCZsHIxWnRgQt6jWTd3C6hZ6.png" alt="Live on BeHot.Now — The Attention Marketplace" width="100%">
-  </a>
-</p>
+<a href="https://behot.now/get-hot">
+  <img src="https://storage.mlcdn.com/account_image/2365654/IgT4Ak3gVL6rVv64QCZsHIxWnRgQt6jWTd3C6hZ6.png" alt="Live on BeHot.Now — open the live URL enrichment flow" width="100%">
+</a>
 
 **[→ Open the live BeHot.Now listing flow](https://behot.now/get-hot)**
 
@@ -64,11 +62,9 @@ That pattern is especially valuable for **Outbid-style websites, paid ranking bo
   </a>
 </p>
 
-<p align="center">
-  <a href="https://space.horno.net">
-    <img src="https://storage.mlcdn.com/account_image/2365654/tFNEqhsEXOiyD4J1ntBWzi4HSTLzrVKHOwWPn0Sw.png" alt="Live on HORNO Space — Space.Horno.net" width="100%">
-  </a>
-</p>
+<a href="https://space.horno.net">
+  <img src="https://storage.mlcdn.com/account_image/2365654/tFNEqhsEXOiyD4J1ntBWzi4HSTLzrVKHOwWPn0Sw.png" alt="Live on HORNO Space — open Space.Horno.net" width="100%">
+</a>
 
 **[→ Open HORNO Space](https://space.horno.net)**
 
@@ -417,6 +413,14 @@ Created by **Vincenzo Picciuolo**, Founder & Lead Engineer, **HRN Innovation Tec
 - Live production showcase: [BeHot.Now](https://behot.now)
 - Live production showcase: [HORNO Space](https://space.horno.net)
 - URL submission flow: [BeHot.Now / Get Hot](https://behot.now/get-hot)
+
+### Follow the projects on X
+
+Follow the builder and the live projects for updates, releases, experiments and new open-source work:
+
+- **Vincenzo Picciuolo:** [@vpicciuolo](https://x.com/vpicciuolo)
+- **HORNO Network:** [@hornonetwork](https://x.com/hornonetwork)
+- **BeHot.Now:** [@BeHotNow2026](https://x.com/BeHotNow2026)
 
 ### ❤️ Support development
 
