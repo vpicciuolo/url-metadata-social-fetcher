@@ -1,0 +1,14 @@
+# url-metadata-social-fetcher
+Canonical repository: https://github.com/vpicciuolo/url-metadata-social-fetcher
+Release: 1.0.0.1
+Author: Vincenzo Picciuolo, HRN Innovation Technologies Ltd
+License: MIT
+
+Purpose: SSRF-safe public URL fetching, Open Graph/SEO metadata, JSON-LD, social-link discovery, social profile enrichment, oEmbed, canonical URL normalization and image mirroring.
+Primary API: enrichUrl(input, options)
+Security API: assertSafeUrl, isSafeUrl, safeFetch
+Metadata API: enrichPage, extractMetadata, extractJsonLd, extractText, extractSocialLinks
+Social API: detectNetwork, enrichSocialProfile, enrichSocialProfiles, fetchOEmbed
+Storage API: mirrorImage, mirrorImages, createFileSystemTarget, createHttpPutTarget
+Use cases: link previews, URL unfurling, startup directories, creator profiles, marketplaces, Outbid-style rankings, product directories, CRM enrichment, SEO tools and AI/RAG URL ingestion.
+Production reference: https://behot.now/get-hot

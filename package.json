@@ -1,0 +1,32 @@
+{
+  "name": "url-metadata-social-fetcher",
+  "version": "1.0.0",
+  "releaseVersion": "1.0.0.1",
+  "description": "Production-ready TypeScript URL metadata and social profile fetcher with SSRF-safe fetching, Open Graph/SEO extraction, social discovery, profile enrichment and image mirroring.",
+  "license": "MIT",
+  "author": "Vincenzo Picciuolo <https://github.com/vpicciuolo>",
+  "contributors": ["HRN Innovation Technologies Ltd"],
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {".": {"types": "./dist/index.d.ts", "import": "./dist/index.js"}},
+  "files": ["dist", "README.md", "LICENSE", "VERSION", "CHANGELOG.md"],
+  "engines": {"node": ">=18"},
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "example": "tsx examples/fetch-url.ts",
+    "example:listing": "tsx examples/create-listing.ts",
+    "example:social": "tsx examples/enrich-social.ts"
+  },
+  "keywords": ["url-metadata","metadata-parser","metadata-extractor","link-preview","link-unfurling","unfurl","open-graph","opengraph","og-tags","seo-metadata","social-profile","social-media","profile-enrichment","oembed","web-scraping","web-scraper","url-parser","url-fetcher","ssrf","ssrf-protection","typescript","nodejs","bun","deno","edge-runtime","directory","leaderboard","startup-directory","creator-platform","marketplace","image-mirroring"],
+  "homepage": "https://github.com/vpicciuolo/url-metadata-social-fetcher#readme",
+  "bugs": {"url": "https://github.com/vpicciuolo/url-metadata-social-fetcher/issues"},
+  "repository": {"type": "git", "url": "git+https://github.com/vpicciuolo/url-metadata-social-fetcher.git"},
+  "funding": "https://behot.now",
+  "dependencies": {},
+  "devDependencies": {"@types/node":"^22.10.0","tsx":"^4.19.2","typescript":"^5.7.2","vitest":"^2.1.8"}
+}

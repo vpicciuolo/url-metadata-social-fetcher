@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+title: URL Metadata & Social Profile Fetcher
+message: If you use this software in research or a publication, please cite it using this metadata.
+type: software
+authors:
+  - family-names: Picciuolo
+    given-names: Vincenzo
+repository-code: https://github.com/vpicciuolo/url-metadata-social-fetcher
+url: https://github.com/vpicciuolo/url-metadata-social-fetcher
+version: 1.0.0.1
+date-released: 2026-08-31
+license: MIT
+abstract: Production-ready TypeScript tooling for SSRF-safe URL fetching, Open Graph and SEO metadata extraction, social profile enrichment, public social-link discovery and image mirroring.
+keywords:
+  - url metadata
+  - Open Graph
+  - social profile enrichment
+  - SSRF
+  - TypeScript
+  - link preview
