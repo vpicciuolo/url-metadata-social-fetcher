@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="520" viewBox="0 0 1600 520" role="img" aria-labelledby="title desc">
+  <title id="title">Live on Space.Horno.net</title>
+  <desc id="desc">The URL enrichment functionality is also used live in HORNO Space.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#020604"/><stop offset="0.55" stop-color="#06120b"/><stop offset="1" stop-color="#001f0c"/></linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#52ff72"/><stop offset="0.5" stop-color="#00cf42"/><stop offset="1" stop-color="#00982d"/></linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1600" height="520" rx="30" fill="url(#bg)"/>
+  <rect x="1.5" y="1.5" width="1597" height="517" rx="28" fill="none" stroke="#00b83d" stroke-width="3"/>
+  <g opacity="0.32" stroke="#24f26a" stroke-width="1">
+    <path d="M850 100L1050 190L1240 80L1460 180"/><path d="M820 310L1030 210L1260 340L1490 250"/><path d="M980 40L1110 380L1360 100L1500 410"/>
+  </g>
+  <g fill="#36ff79" opacity="0.75"><circle cx="850" cy="100" r="4"/><circle cx="1050" cy="190" r="5"/><circle cx="1240" cy="80" r="4"/><circle cx="1460" cy="180" r="5"/><circle cx="1030" cy="210" r="4"/><circle cx="1260" cy="340" r="5"/><circle cx="1490" cy="250" r="4"/></g>
+
+  <g transform="translate(55,42)">
+    <circle cx="65" cy="65" r="58" fill="#052c13" stroke="#27ff69" stroke-width="5" filter="url(#glow)"/>
+    <text x="65" y="71" text-anchor="middle" fill="#24ef5d" font-family="Arial,Helvetica,sans-serif" font-size="57" font-weight="900">#</text>
+    <circle cx="65" cy="93" r="9" fill="#37ff70"/><circle cx="42" cy="99" r="7" fill="#37ff70"/><circle cx="88" cy="99" r="7" fill="#37ff70"/>
+    <text x="145" y="83" fill="#16d747" font-family="Arial,Helvetica,sans-serif" font-size="53" font-weight="900">HORNO</text>
+    <text x="337" y="83" fill="#ffffff" font-family="Arial,Helvetica,sans-serif" font-size="50" font-weight="400">Space</text>
+  </g>
+
+  <text x="58" y="205" fill="#ffffff" font-family="Arial,Helvetica,sans-serif" font-size="63" font-weight="800">Live on <tspan fill="#10d743">Space.Horno.net</tspan></text>
+  <line x1="58" y1="230" x2="820" y2="230" stroke="#21ec5d" stroke-width="3" filter="url(#glow)"/>
+  <text x="58" y="292" fill="#ffffff" font-family="Arial,Helvetica,sans-serif" font-size="38" font-weight="700">Your digital world. <tspan fill="#18dd4a">One link.</tspan></text>
+  <text x="58" y="340" fill="#c9d4cd" font-family="Arial,Helvetica,sans-serif" font-size="25">Bio page · Smart links · Digital business card · Articles · Analytics</text>
+  <text x="58" y="377" fill="#c9d4cd" font-family="Arial,Helvetica,sans-serif" font-size="25">Profiles and external URLs become richer, structured, shareable experiences.</text>
+
+  <rect x="58" y="411" width="435" height="76" rx="38" fill="#052c13" stroke="#29ff6d" stroke-width="3" filter="url(#glow)"/>
+  <circle cx="102" cy="449" r="25" fill="#0d6e2d" stroke="#43ff7b" stroke-width="2"/>
+  <path d="M91 455l14-20 11 8-25 12zm17-17l8-7 3 10z" fill="#4aff80"/>
+  <text x="145" y="459" fill="#ffffff" font-family="Arial,Helvetica,sans-serif" font-size="30" font-weight="800">Open Space.Horno.net →</text>
+
+  <g transform="translate(925,85)">
+    <rect x="0" y="0" width="235" height="100" rx="20" fill="#06170d" stroke="#1bd957" stroke-width="2"/>
+    <text x="28" y="39" fill="#49ff7d" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="700">Bio Link</text><text x="28" y="72" fill="#e9f1eb" font-family="Arial,Helvetica,sans-serif" font-size="19">All your links. One place.</text>
+    <rect x="260" y="0" width="270" height="100" rx="20" fill="#06170d" stroke="#1bd957" stroke-width="2"/>
+    <text x="288" y="39" fill="#49ff7d" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="700">Business Card</text><text x="288" y="72" fill="#e9f1eb" font-family="Arial,Helvetica,sans-serif" font-size="19">Share who you are.</text>
+    <rect x="0" y="125" width="235" height="100" rx="20" fill="#06170d" stroke="#1bd957" stroke-width="2"/>
+    <text x="28" y="164" fill="#49ff7d" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="700">Socials</text><text x="28" y="197" fill="#e9f1eb" font-family="Arial,Helvetica,sans-serif" font-size="19">Showcase your channels.</text>
+    <rect x="260" y="125" width="270" height="100" rx="20" fill="#06170d" stroke="#1bd957" stroke-width="2"/>
+    <text x="288" y="164" fill="#49ff7d" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="700">Products &amp; Services</text><text x="288" y="197" fill="#e9f1eb" font-family="Arial,Helvetica,sans-serif" font-size="19">Showcase and promote.</text>
+    <rect x="130" y="250" width="270" height="100" rx="20" fill="#06170d" stroke="#1bd957" stroke-width="2"/>
+    <text x="158" y="289" fill="#49ff7d" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="700">Community + Live</text><text x="158" y="322" fill="#e9f1eb" font-family="Arial,Helvetica,sans-serif" font-size="19">Connect and grow.</text>
+  </g>
+</svg>
