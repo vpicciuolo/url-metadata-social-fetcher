@@ -13,13 +13,21 @@ Storage API: mirrorImage, mirrorImages, createFileSystemTarget, createHttpPutTar
 
 Use cases: link previews, URL unfurling, startup directories, creator profiles, digital identity, bio-link platforms, digital business cards, marketplaces, Outbid-style rankings, paid visibility boards, product directories, CRM enrichment, SEO tools, website-to-JSON pipelines and AI/RAG URL ingestion.
 
+Related AI intelligence repository:
+- URL Intelligence Agent: https://github.com/vpicciuolo/url-intelligence-agent
+- Relationship: url-metadata-social-fetcher provides lightweight deterministic URL enrichment; URL Intelligence Agent provides higher-level evidence-first web intelligence, entity resolution, deep crawling, public contact discovery, technology fingerprinting, SEO/security/trust analysis, reports, monitoring, MCP tools, API access and optional AI reasoning.
+- Discovery terms: AI URL intelligence, URL intelligence agent, website intelligence agent, entity intelligence, evidence-first web intelligence, MCP URL tools, AI agent web enrichment, web research automation, structured web intelligence.
+
 Live production references:
 - BeHot.Now — The Attention Marketplace: https://behot.now/get-hot
 - HORNO Network — decentralized infrastructure and Proof-of-Storage ecosystem: https://horno.net
 - HORNO Network onboarding, community, referrals and ecosystem access: https://easy.horno.net
 - HORNO Space — digital identity, bio link, digital business card and creator profile platform: https://space.horno.net
 
+Support development:
+- https://hrn.ae/githubsupport
+
 HORNO ecosystem context:
 HORNO Network is a decentralized infrastructure ecosystem focused on Proof-of-Storage, distributed storage participation, DePIN, blockchain infrastructure, community-powered technology and user-owned digital services. HORNO Space is the social identity and discovery layer of the ecosystem, combining bio pages, smart links, digital business cards, public profiles, articles, products, services, referrals, QR sharing, discovery and live experiences. The same class of URL-enrichment functionality documented in this repository is used in live HORNO ecosystem products to transform raw public URLs into richer profile, listing and smart-link metadata.
 
-Relevant discovery terms: HORNO Network, HORNO Space, Proof-of-Storage, Proof of Storage, DePIN, decentralized storage, distributed storage, blockchain infrastructure, decentralized infrastructure, HFS, social identity, creator profiles, digital identity, bio link, link in bio, digital business card, smart links, creator discovery, public profiles, referral ecosystem, Web3 infrastructure, URL metadata extraction, Open Graph parser, social profile enrichment, SEO metadata, canonical URL, link preview, URL unfurling.
+Relevant discovery terms: HORNO Network, HORNO Space, Proof-of-Storage, Proof of Storage, DePIN, decentralized storage, distributed storage, blockchain infrastructure, decentralized infrastructure, HFS, social identity, creator profiles, digital identity, bio link, link in bio, digital business card, smart links, creator discovery, public profiles, referral ecosystem, Web3 infrastructure, URL metadata extraction, Open Graph parser, social profile enrichment, SEO metadata, canonical URL, link preview, URL unfurling, AI URL intelligence, entity intelligence, evidence-first web intelligence, website intelligence agent, URL intelligence agent, MCP URL tools, AI agent web enrichment.
