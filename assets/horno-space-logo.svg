@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="360" viewBox="0 0 1400 360" role="img" aria-labelledby="title desc">
+  <title id="title">HORNO Space</title>
+  <desc id="desc">HORNO Space logo — Your digital world. One link.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#57ff77"/><stop offset="0.45" stop-color="#0fdc47"/><stop offset="1" stop-color="#048c2b"/></linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g transform="translate(34,24)">
+    <circle cx="148" cy="148" r="124" fill="#04150a" stroke="url(#g)" stroke-width="10" filter="url(#glow)"/>
+    <ellipse cx="148" cy="148" rx="155" ry="52" fill="none" stroke="#39ff70" stroke-width="7" transform="rotate(-18 148 148)" filter="url(#glow)"/>
+    <text x="148" y="158" text-anchor="middle" fill="url(#g)" font-family="Arial,Helvetica,sans-serif" font-size="126" font-weight="900">#</text>
+    <circle cx="148" cy="213" r="21" fill="#44ff75"/><circle cx="99" cy="224" r="16" fill="#38ee67"/><circle cx="197" cy="224" r="16" fill="#38ee67"/>
+    <path d="M111 250c7-22 23-33 37-33s30 11 37 33zM70 254c7-18 18-27 29-27 10 0 21 9 28 27zM169 254c7-18 18-27 28-27 11 0 22 9 29 27z" fill="#28d958"/>
+  </g>
+  <text x="350" y="174" fill="url(#g)" font-family="Arial,Helvetica,sans-serif" font-size="150" font-weight="900" letter-spacing="2">HORNO</text>
+  <text x="890" y="174" fill="#f6f7f8" font-family="Arial,Helvetica,sans-serif" font-size="132" font-weight="400">Space</text>
+  <line x1="350" y1="231" x2="1325" y2="231" stroke="#1de25a" stroke-width="3" opacity="0.8"/>
+  <text x="350" y="291" fill="#e8ece9" font-family="Arial,Helvetica,sans-serif" font-size="39" letter-spacing="9">YOUR DIGITAL WORLD. <tspan fill="#22e85b" font-weight="700">ONE LINK.</tspan></text>
+</svg>
